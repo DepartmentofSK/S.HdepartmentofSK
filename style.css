@@ -1,0 +1,246 @@
+    :root {
+    --primary-navy: #485696;
+    --action-yellow: #faae4a;
+    --text-gray: #555;
+    --link-main: #485696;
+    --box-bg: #f0f0f0;
+    --border-gray: #d6d6d6;
+    --purple-highlight: #6b3077;
+}
+
+*{
+    font-family: Poppins;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.5;
+    background-color: #E7E7E7;
+}
+
+/* Top Banner */
+.top-banner {
+    background-color: #f0f0f0;
+    font-size: 12px;
+    padding: 5px 10%;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Main Header */
+header {
+    background-color: var(--primary-navy);
+    color: white;
+    padding: 20px 10%;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-circle {
+    font-family: 'Courier New', Courier, monospace;
+    width: 50px;
+    height: 50px;
+    background: var(--action-yellow);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--primary-navy);
+}
+
+.agency-name {
+    font-size: 24px;
+    font-family: serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.utility-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+/* Main Navigation */
+nav {
+    background-color: var(--primary-navy);
+    border-top: 1px solid #E7E7E7;
+    padding: 10px 10%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Search Section */
+.search-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* This removes the gray box and adds the separator line */
+.searchable-article {
+    background-color: #E7E7E7 !important; /* Forces background to be gone */
+    border-bottom: 1px solid #d6d6d6;          /* The thin line from your image */
+    padding: 25px 0;                          /* Spacing above/below the text */
+    margin-bottom: 0;                         /* Removes gaps between items */
+}
+
+/* Specific Title Styling to match the image */
+.searchable-article h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.searchable-article h3 a {
+    color: #333 !important;                   /* Dark text like the image */
+    text-decoration: underline !important;    /* Force the underline */
+    font-size: 20px;
+    font-weight: 700;                         /* Bold titles */
+}
+
+.searchable-article h3 a:hover {
+    color: var(--primary-navy) !important;
+}
+
+/* Description Text */
+.searchable-article p {
+    color: #333;
+    font-size: 15px;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.search-bar {
+    display: flex;
+    border: 1px solid #888;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    padding: 12px;
+    border: none;
+    font-size: 16px;
+}
+
+.search-bar button {
+    background-color: var(--action-yellow);
+    border: none;
+    padding: 0 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.search-tabs {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid var(--border-gray);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.tab {
+    padding-bottom: 8px;
+    cursor: pointer;
+}
+
+.tab.active {
+    border-bottom: 4px solid var(--link-blue);
+    color: var(--link-blue);
+}
+
+/* Results Area */
+.results-count {
+    color: var(--text-gray);
+    font-size: 14px;
+    margin: 20px 0;
+}
+
+/* Make sure links in articles look like the original screenshot */
+.result-item h3 a {
+    text-decoration: underline;
+    color: var(--link-blue);
+    font-size: 18px;
+}
+
+/* Recommended Box */
+.recommended-box {
+    background-color: var(--box-bg);
+    padding: 25px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.recommended-label {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.recommended-title {
+    color: var(--purple-highlight);
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.recommended-box p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.url {
+    color: var(--link-blue);
+    font-size: 13px;
+    display: block;
+}
+
+/* Standard Result */
+.result-item {
+    margin-bottom: 30px;
+}
+
+.result-item h3 {
+    color: var(--link-blue);
+    margin: 0 0 5px 0;
+    font-weight: normal;
+}
+
+.result-item p {
+    font-size: 14px;
+    margin: 5px 0;
+}
