@@ -96,20 +96,24 @@
         const listDiv = document.getElementById('articles-list');
         const searchInput = document.getElementById('user-search');
 
-        function renderResults() {
+         function renderResults() {
             const query = searchInput.value.toLowerCase();
-            const filtered = articleDatabase.filter(a => a.title.toLowerCase().includes(query) || a.summary.toLowerCase().includes(query));
-            
-            document.querySelector('.results-count').textContent = `${filtered.length} results`;
-            
-            // Updated to use the clean lines style (searchable-article)
-            listDiv.innerHTML = filtered.map(a => `
-                <div class="searchable-article">
-                    <h3><a href="#${a.id}">${a.title}</a></h3>
-                    <p>${a.summary}</p>
-                </div>
-            `).join('');
-        }
+            const filtered = articleDatabase.filter(a => 
+                a.title.toLowerCase().includes(query) || 
+                a.summary.toLowerCase().includes(query)
+            );
+    
+    document.querySelector('.results-count').textContent = `${filtered.length} results`;
+    
+    listDiv.innerHTML = filtered.map(a => `
+        <div class="searchable-article">
+            <h3>
+                <a href="${a.pdfUrl}">${a.title}</a>
+            </h3>
+            <p>${a.summary}</p>
+        </div>
+    `).join('');
+}
 
         function handleRouting() {
             const hash = window.location.hash.replace('#', '');
